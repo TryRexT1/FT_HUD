@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "../FT_HUDProjectile.h"
 #include "GameFramework/Character.h"
 #include "Blueprint/UserWidget.h"
 #include "CannonCharacter.generated.h"
@@ -25,6 +26,10 @@ class FT_HUD_API ACannonCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
+	/** Projectile class to spawn */
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	TSubclassOf<class AFT_HUDProjectile> ProjectileClass;
+
 	/** camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
@@ -40,6 +45,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	void UpdateValue(float* value, float DeltaTime);
+	void Fire();
 
 public:	
 	// Called every frame
@@ -66,5 +72,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "HUD")
 	UUserWidget* HUD;
 
-
+	UFUNCTION()
+	void ProgressState();
 };
