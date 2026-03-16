@@ -1,6 +1,6 @@
 # FT\_HUD
 
-This is the focus topic for working with the GUI and and interactive elements. In this you will make a tradition cannon style game using two power bars/
+This is the focus topic for working with the GUI and and interactive elements. In this you will make a tradition cannon style game using two power bars.
 
 ## Overview
 Controls:
@@ -11,7 +11,7 @@ This is a basic cannon style game you have two bars pre-built, bottom is your po
 # Where to find the relevant scripts
 In C++ the main script is the **CannonCharacter**. However, for todays session you will need to look in the **UI** folder and open the **UI Widget** I have built for you. 
 
-The widget has two views when you open it, the **Designer**, which is the building of the UI Canvas and the **Graph**, which controls the UI through a buildprint interface.
+The widget has two views when you open it, the **Designer**, which is the building of the UI Canvas and the **Graph**, which controls the UI through a blueprint interface.
 ![This is the options to switch between graph view and designer.](Hints/DesignerGraph.png)
 
 You will also notice i have used the Naive State Machine pattern, with Enums.
