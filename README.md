@@ -21,7 +21,8 @@ For the variables in the canvas, note i have **binded** the variables to the **p
 
 # Task
 Try to first implement the angle bar to aid the cannons firing.
-
+- You will have to adjust the Blueprint of the widget
+- In the cannon tick function you will also have to add some code
 # Challenges
 Test Your Might
 
