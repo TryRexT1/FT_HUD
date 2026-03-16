@@ -99,7 +99,10 @@ void ACannonCharacter::ProgressState()
 		break;
 	case ShootingState::Shot:
 		// pew pew
-		UE_LOG(LogTemp, Warning, TEXT("Wait!"));
+		UE_LOG(LogTemp, Warning, TEXT("Shot with power %f and angle %f!"), power, angle);
+		power = 0;
+		angle = 0;
+		CurrentState = ShootingState::Power;
 		break;
 	default:
 		UE_LOG(LogTemp, Error, TEXT("WHY YOU MESSING WITH THE ENUMS!"));
